@@ -20,7 +20,7 @@ import { UserModule } from './user/user.module';
       type: 'postgres',
       url: process.env.DATABASE_URL,
       autoLoadEntities: true,
-      synchronize: false,
+      synchronize: true,
     }),
     UserModule,
     ChatModule,
