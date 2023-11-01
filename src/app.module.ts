@@ -17,14 +17,10 @@ import { UserModule } from './user/user.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
-      type: 'mongodb',
+      type: 'postgres',
       url: process.env.DATABASE_URL,
       autoLoadEntities: true,
-      connectTimeoutMS: 40000,
-      logger: 'simple-console',
-      synchronize: true,
-      retryAttempts: 5,
-      retryDelay: 5000,
+      synchronize: false,
     }),
     UserModule,
     ChatModule,
