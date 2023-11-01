@@ -25,6 +25,6 @@ export class ConnectedUserService {
   }
 
   async deleteAll() {
-    await this.connectedUserRepository.createQueryBuilder().delete().execute();
+    await this.connectedUserRepository.clear();
   }
 }
