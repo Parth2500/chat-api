@@ -18,7 +18,7 @@ import { UserModule } from './user/user.module';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      url: 'mongodb+srv://Aegon:LZhaFxpexFJOgJ8J@cluster0.opxlunk.mongodb.net/demoDB',
+      url: process.env.DATABASE_URL,
       autoLoadEntities: true,
       connectTimeoutMS: 40000,
       logger: 'simple-console',
